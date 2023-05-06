@@ -18,6 +18,8 @@ fetch('https://books-backend.p.goit.global/books/top-books', {
     console.log(galleryBook.innerHTML);
   });
 
+ 
+
 // function buildTopBooksMarkup({ books }) {
 //   console.log(books);
 //   return `

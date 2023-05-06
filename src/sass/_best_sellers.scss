@@ -70,5 +70,25 @@
     cursor: pointer;
 };
 
+#scroll-top {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 34px;
+    height: 34px;
+    // z-index: 99;
+    outline: none;
+    background-color: #fff;
+    background-color: var(--active-category-color);
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+// .scroll-arrow {
+  
+// }
+
 
 // =============================== TABLET ============================================
