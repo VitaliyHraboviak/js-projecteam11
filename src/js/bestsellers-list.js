@@ -63,14 +63,9 @@ function buildTopBooksMarkup({ books }) {
     `;
   
   }
+}
 
-//   const btnSeeMore = document.createElement('button');
-// btnSeeMore.className = 'see-more-btn';
-// btnSeeMore.innerHTML = 'See more';
-// btnSeeMore.type = 'button';
-//   document.body.appendChild('btnSeeMore');
 
-// }
   
 
   
