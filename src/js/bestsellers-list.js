@@ -8,10 +8,13 @@ fetch('https://books-backend.p.goit.global/books/top-books', {
   })
   .then(resData => {
     console.log({ resData });
-    const topBooks = document.querySelector('.top-books');
-    const markup = resData.map(buildTopBooksMarkup).join('');
+    let topBooks = document.querySelector('.top-books');
+    let markup = resData.map(buildTopBooksMarkup).join('');
+    let additionalLink = `<button type="button">affasfs</button>`;
+    markup += additionalLink;
     topBooks.innerHTML = markup;
     console.log(markup);
+    console.log(topBooks.innerHTML);
   });
 
 // function buildTopBooksMarkup({ books }) {
@@ -45,6 +48,7 @@ function buildTopBooksMarkup({ books }) {
   console.log(books);
   for (let i = 0; i < books.length; i += 1) {
     // returning HTML markup as JS String
+    //    let bookMarkUp2nd = '';
     return `
     <li class="img-card">
     <h2 class="type-of-books">Combined Print and E-Book Fiction</h2>

@@ -23,10 +23,18 @@ function chooseCategory(event) {
       // console.log({ resData });
       console.log(resData);
       console.log({ resData });
+      const removedBestsellersHTML = document.querySelector('.ul-bestsellers');
+      const removedChosenHTML = document.querySelector('.top-books');
+      if (removedBestsellersHTML) {
+        removedBestsellersHTML.innerHTML = '';
+      }
+      if (removedChosenHTML) {
+        removedChosenHTML.innerHtml = '';
+      }
 
-      const chosen = document.querySelector('.chosen');
+      //   const chosen = document.querySelector('.chosen');
       const markup = resData.map(buildTopBooksMarkup).join('');
-      chosen.innerHTML = markup;
+      removedChosenHTML.innerHTML = markup;
     });
 
   function buildTopBooksMarkup({ list_name, title, author, book_image }) {
@@ -35,7 +43,7 @@ function chooseCategory(event) {
     //   for (let i = 0; i < resData.length; i += 1) {
     // returning HTML markup as JS String
     return `
-    <ul> 
+    <ul class="ul-chosen-categories"> 
   <li>Category: ${list_name}</li>
   <li>Title: ${title}</li>
   <li>Author: ${author}</li>
