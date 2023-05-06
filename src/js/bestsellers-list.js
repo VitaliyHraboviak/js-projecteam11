@@ -8,13 +8,14 @@ fetch('https://books-backend.p.goit.global/books/top-books', {
   })
   .then(resData => {
     console.log({ resData });
-    let topBooks = document.querySelector('.top-books');
+    const galleryBook = document.querySelector('.book-gallery')
+    // let topBooks = document.querySelector('.top-books');
     let markup = resData.map(buildTopBooksMarkup).join('');
-    let additionalLink = `<button type="button">affasfs</button>`;
-    markup += additionalLink;
-    topBooks.innerHTML = markup;
+    // let additionalLink = `<button type="button">affasfs</button>`;
+    // markup += additionalLink;
+    galleryBook.innerHTML = markup;
     console.log(markup);
-    console.log(topBooks.innerHTML);
+    console.log(galleryBook.innerHTML);
   });
 
 // function buildTopBooksMarkup({ books }) {
@@ -50,6 +51,7 @@ function buildTopBooksMarkup({ books }) {
     // returning HTML markup as JS String
     //    let bookMarkUp2nd = '';
     return `
+    
     <li class="img-card">
     <h2 class="type-of-books">Combined Print and E-Book Fiction</h2>
     <img class="img-font-page" src="${books[i].book_image}" alt="books font page" />
@@ -60,6 +62,7 @@ function buildTopBooksMarkup({ books }) {
       <a href="${'https://books-backend.p.goit.global/books/top-books'}" 
       target="_blank" class="see-more-btn">See more</a>
      </li>
+     
     `;
   
   }
