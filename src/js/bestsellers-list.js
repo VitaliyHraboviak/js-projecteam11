@@ -60,7 +60,7 @@ function buildTopBooksMarkup({ books }) {
       <p class="book-author" <i>${books[i].author}</i></p>
      </div>
       <a href="${'https://books-backend.p.goit.global/books/top-books'}" 
-      target="_blank" class="see-more-btn">See more</a>
+      target="_blank" class="see-more-btn">SEE MORE</a>
      </li>
      
     `;

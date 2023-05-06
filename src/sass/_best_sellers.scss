@@ -3,9 +3,10 @@
 
 .top-books {
     color: var(--text-dark);
-    font-size: 38px;
+    font-size: 32px;
+    line-height: 38px;
     margin-top: 764px;
-    margin-bottom: 40px;
+    margin-left: 20px;
 }
 
 .books {
@@ -20,7 +21,7 @@
 
 .img-card {
     list-style: none;
-    width: 335px;
+    min-width: 335px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -29,7 +30,7 @@
 
 .book-info {
     margin-top: 14px;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     border-radius: 8px;
 
 }
@@ -37,8 +38,8 @@
 .book-name {
     font-size: 16px;
     line-height: 18px;
-    padding-bottom: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    
 
 }
 
@@ -48,12 +49,14 @@
     line-height: 14px;
     color: #B4AFAF;
     
+    
 
 
 }
 .see-more-btn {
-    display: inline-block;
+    display: inline-flex;
     justify-content: center;
+    margin-left: 200px;
     font-size: 14px;
     line-height: 18px;
     font-weight: 700;
@@ -63,8 +66,7 @@
     padding: 14px 28px;
     text-align: center;
     margin-bottom: 40px;
-    margin-top: 8px;
-    margin-left: 212px;
+    color: var(--text-dark);
     cursor: pointer;
 };
 
