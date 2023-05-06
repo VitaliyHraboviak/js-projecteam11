@@ -55,6 +55,8 @@
     content: counter(item, decimal-leading-zero) " ";
     counter-increment: item;
 color: #FFFFFF;
+display: flex;
+flex-direction: column;
 font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
