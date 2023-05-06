@@ -63,7 +63,7 @@ function buildTopBooksMarkup({ books }) {
     `;
   
   }
-}
+};
 
 
   
