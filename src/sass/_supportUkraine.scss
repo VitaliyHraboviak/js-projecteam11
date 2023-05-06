@@ -54,10 +54,10 @@
 .gallery__item_support:before {
     content: counter(item, decimal-leading-zero) " ";
     counter-increment: item;
-color: #FFFFFF;
-display: flex;
-flex-direction: column;
-font-family: 'DM Sans';
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
