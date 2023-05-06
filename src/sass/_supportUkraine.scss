@@ -13,7 +13,9 @@
     margin-bottom: 0;
     margin-left: 40px;
     margin-top: 24px;
+
 }
+
 .gallery__item_support{
     display: flex;
     width: 159px;
@@ -48,4 +50,11 @@
     content: counter(item, decimal-leading-zero) " ";
     counter-increment: item;
 color: #FFFFFF;
+}
+.icon-support{
+    color: #FFFFFF;
+}
+.icon-support-png{
+    width: 20px;
+    height: 32px;
 }
