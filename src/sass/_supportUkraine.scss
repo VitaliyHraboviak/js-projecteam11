@@ -18,6 +18,11 @@
 
 .gallery__item_support{
     display: flex;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    align-items: flex-end;
     width: 159px;
     height: auto;
     margin-left: 40px;
@@ -50,11 +55,13 @@
     content: counter(item, decimal-leading-zero) " ";
     counter-increment: item;
 color: #FFFFFF;
+font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    align-items: flex-end;
 }
-.icon-support{
-    color: #FFFFFF;
-}
-.icon-support-png{
-    width: 20px;
-    height: 32px;
+.img-support{
+    margin-left: 12px;
+    margin-top: 24px;
 }
