@@ -15,7 +15,7 @@
     margin-top: 24px;
 }
 .gallery__item_support{
-    display: inline-block;
+    display: flex;
     width: 159px;
     height: auto;
     margin-left: 40px;
@@ -24,14 +24,11 @@
     margin-bottom: 10px;
 }
 .gallery__image{
-    width: 159px;
-    height: 32px;
+    margin-left: 16px;
     align-items: center;
 }
 .gallery__link{
-    width: 159px;
-    height: auto;
-    color: #FFFFFF;
+   
 }
 
 .gallery-support{
@@ -43,13 +40,12 @@
     padding-left: 0;
     margin: 40px;
     margin-bottom: 102px;
+    gap: 20px;
 }
 
 
 .gallery__item_support:before {
     content: counter(item, decimal-leading-zero) " ";
     counter-increment: item;
-}
-::marker{
-    color: #FFFFFF;
+color: #FFFFFF;
 }
