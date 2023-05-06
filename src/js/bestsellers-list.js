@@ -52,10 +52,21 @@ function buildTopBooksMarkup({ books }) {
     <div class="book-info">
       <h3 class="book-name" <i>${books[i].title}</i></h3>
       <p class="book-author" <i>${books[i].author}</i></p>
-    </div>
-    
-  
+     </div>
+      <a href="${'https://books-backend.p.goit.global/books/top-books'}" 
+      target="_blank" class="see-more-btn">See more</a>
+     </li>
     `;
-    
+  
   }
-}
+
+//   const btnSeeMore = document.createElement('button');
+// btnSeeMore.className = 'see-more-btn';
+// btnSeeMore.innerHTML = 'See more';
+// btnSeeMore.type = 'button';
+//   document.body.appendChild('btnSeeMore');
+
+// }
+  
+
+  
