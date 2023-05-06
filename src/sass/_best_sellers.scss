@@ -2,22 +2,55 @@
 //  ============================== MODAL WINDOW =============================
 
 .top-books {
-    color: #111111;
+    color: var(--text-dark);
     font-size: 38px;
     margin-top: 764px;
     margin-bottom: 40px;
 }
 
 .books {
-    color: #4f2ee8
+    color: var(--active-category-color)
 };
 
 .type-of-books {
-    color: #b4afaf;
+    color: var(--light-grey);
     font-size: 18px;
+    margin-bottom: 18px;
 }
 
+.img-card {
+    list-style: none;
+    width: 335px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.book-info {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+
+}
+
+.book-name {
+    font-size: 16px;
+    line-height: 18px;
+    padding-bottom: 4px;
+
+}
+
+.book-author{
+
+    font-size: 12px;
+    line-height: 14px;
+    color: #B4AFAF;
+
+
+}
 .see-more-btn {
+    margin-left: 231px;
     font-size: 14px;
     line-height: 18px;
     font-weight: 700;
@@ -25,6 +58,7 @@
     border-radius: 40px;
     background-color: #fff;
     padding: 14px 28px;
+    margin-top: 8px;
     cursor: pointer;
 }
 

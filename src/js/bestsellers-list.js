@@ -46,12 +46,16 @@ function buildTopBooksMarkup({ books }) {
   for (let i = 0; i < books.length; i += 1) {
     // returning HTML markup as JS String
     return `
-    <ul> 
-  <li>Category: ${books[i].list_name}</li>
-  <li>Title: ${books[i].title}</li>
-  <li>Author: ${books[i].author}</li>
-  <li>Image: <img src="${books[i].book_image}" alt="books photo" /></li>
-</ul>
+    <li class="img-card">
+    <h2 class="type-of-books">Combined Print and E-Book Fiction</h2>
+    <img class="img-font-page" src="${books[i].book_image}" alt="books font page" />
+    <div class="book-info">
+      <h3 class="book-name" <i>${books[i].title}</i></h3>
+      <p class="book-author" <i>${books[i].author}</i></p>
+    </div>
+    
+  
     `;
+    
   }
 }
