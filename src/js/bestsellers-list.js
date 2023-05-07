@@ -8,14 +8,17 @@ fetch('https://books-backend.p.goit.global/books/top-books', {
   })
   .then(resData => {
     console.log({ resData });
-    let topBooks = document.querySelector('.top-books');
+    const galleryBook = document.querySelector('.book-gallery')
+    // let topBooks = document.querySelector('.top-books');
     let markup = resData.map(buildTopBooksMarkup).join('');
-    let additionalLink = `<button type="button">affasfs</button>`;
-    markup += additionalLink;
-    topBooks.innerHTML = markup;
+    // let additionalLink = `<button type="button">affasfs</button>`;
+    // markup += additionalLink;
+    galleryBook.innerHTML = markup;
     console.log(markup);
-    console.log(topBooks.innerHTML);
+    console.log(galleryBook.innerHTML);
   });
+
+ 
 
 // function buildTopBooksMarkup({ books }) {
 //   console.log(books);
@@ -50,13 +53,24 @@ function buildTopBooksMarkup({ books }) {
     // returning HTML markup as JS String
     //    let bookMarkUp2nd = '';
     return `
-    <ul class="ul-bestsellers"> 
-  <li>Category: ${books[i].list_name}</li>
-  <li>Title: ${books[i].title}</li>
-  <li>Author: ${books[i].author}</li>
-  <li>Image: <img src="${books[i].book_image}" alt="books photo" /></li>
-</ul>
- 
+    
+    <li class="img-card">
+    <h2 class="type-of-books">Combined Print and E-Book Fiction</h2>
+    <img class="img-font-page" src="${books[i].book_image}" alt="books font page" />
+    <div class="book-info">
+      <h3 class="book-name" <i>${books[i].title}</i></h3>
+      <p class="book-author" <i>${books[i].author}</i></p>
+     </div>
+      <a href="${'https://books-backend.p.goit.global/books/top-books'}" 
+      target="_blank" class="see-more-btn">SEE MORE</a>
+     </li>
+     
     `;
+  
   }
-}
+};
+
+
+  
+
+  

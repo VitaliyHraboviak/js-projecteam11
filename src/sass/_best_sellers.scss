@@ -2,22 +2,61 @@
 //  ============================== MODAL WINDOW =============================
 
 .top-books {
-    color: #111111;
-    font-size: 38px;
+    color: var(--text-dark);
+    font-size: 32px;
+    line-height: 38px;
     margin-top: 764px;
-    margin-bottom: 40px;
+    margin-left: 20px;
 }
 
 .books {
-    color: #4f2ee8
+    color: var(--active-category-color)
 };
 
 .type-of-books {
-    color: #b4afaf;
+    color: var(--light-grey);
     font-size: 18px;
+    margin-bottom: 18px;
 }
 
+.img-card {
+    list-style: none;
+    min-width: 335px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.book-info {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+
+}
+
+.book-name {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 4px;
+    
+
+}
+
+.book-author{
+
+    font-size: 12px;
+    line-height: 14px;
+    color: #B4AFAF;
+    
+    
+
+
+}
 .see-more-btn {
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 200px;
     font-size: 14px;
     line-height: 18px;
     font-weight: 700;
@@ -25,8 +64,31 @@
     border-radius: 40px;
     background-color: #fff;
     padding: 14px 28px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
     cursor: pointer;
+};
+
+#scroll-top {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 34px;
+    height: 34px;
+    // z-index: 99;
+    outline: none;
+    background-color: #fff;
+    background-color: var(--active-category-color);
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50px;
 }
+
+// .scroll-arrow {
+  
+// }
 
 
 // =============================== TABLET ============================================
