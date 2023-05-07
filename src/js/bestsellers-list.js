@@ -1,62 +1,122 @@
-fetch('https://books-backend.p.goit.global/books/top-books', {
-  method: 'GET',
-  headers: { accept: 'application/json' },
-})
-  .then(response => {
-    console.log({ response });
-    return response.json();
-  })
-  .then(resData => {
-    console.log({ resData });
-    let topBooks = document.querySelector('.top-books');
-    let markup = resData.map(buildTopBooksMarkup).join('');
-    let additionalLink = `<button type="button">affasfs</button>`;
-    markup += additionalLink;
-    topBooks.innerHTML = markup;
-    console.log(markup);
-    console.log(topBooks.innerHTML);
-  });
+// import { makeCategoriesListArray } from './categories-list';
+// import { categoriesArrayq } from './categories-list';
+// const topBooks = document.querySelector('.top-books');
+// console.log(categoriesArrayq);
 
-// function buildTopBooksMarkup({ books }) {
-//   console.log(books);
-//   return `
-//     <ul>
-//   <li></li>
-//   <li>${books[0].list_name}</li>
-//   <li>${books[0].title}</li>
-//   <li>${books[0].author}</li>
-//   <li><img src="${books[0].book_image}" alt="books photo" /></li>
-// </ul>
+// function renderBestsellers() {
+//   fetch('https://books-backend.p.goit.global/books/top-books', {
+//     method: 'GET',
+//     headers: { accept: 'application/json' },
+//   })
+//     .then(response => {
+//       console.log({ response });
+//       return response.json();
+//     })
+//     .then(resData => {
+//       console.dir(resData);
+
+//       //   console.log(topBooks);
+
+//       let markup = resData.map(buildTopBooksMarkup).join('');
+
+//       topBooks.insertAdjacentHTML('beforeend', markup);
+//       // console.log(topBooks);
+//       // console.log(topBooks.innerHTML);
+//       const ulBestsellers = document.querySelector('.ul-bestsellers');
+//       // console.log(ulBestsellers);
+//       //////// ulBestsellers - all books li items together in one list
+//       const booksProfileArray = document.querySelectorAll('.ul-bestsellers');
+//       // const nodesList = document.querySelectorAll('.ul-bestsellers');
+//       // const galleryListRef = nodesList[nodesList.length - 1];
+//       // console.log(galleryListRef);
+//     })
+//     .then(response => {
+//       comsole.log(response);
+//       let serviceArray = response;
+
+//       // console.dir(serviceArray.length);
+//       //   for (let data of resData) {
+//       // console.log(categoriesArrayq);
+//       const makeCategoriesListArraylength = makeCategoriesListArray().length;
+//       // async function console() {
+//       //   await console.log(makeCategoriesListArraylength);
+
+//       // for (let index = 0; index < makeCategoriesListArraylength; index += 1) {
+//       let array = [];
+//       for (let i = 0; i < serviceArray.length; i += 1) {
+//         booksProfileArray.insertAdjacentHTML(
+//           'afterbegin',
+//           `<h3 class="books-category">${resData[i].list_name}</h3>`
+//         );
+//         console.log(galleryListRef);
+//         booksProfileArray.insertAdjacentHTML(
+//           'afterbegin',
+//           `<img src="${resData[i].books[i].book_image}" alt="books photo" /> `
+//         );
+//         booksProfileArray.insertAdjacentHTML(
+//           'afterbegin',
+//           `<li>Title: ${resData[i].books[i].title}</li> `
+//         );
+//         booksProfileArray.insertAdjacentHTML(
+//           'afterbegin',
+//           `<button class="gallery-see-more-btn" data-category="${resData[i].books[i].list_name}">See more</button>`
+//         );
+//         // }
+
+//         console.log(booksProfileArray);
+//         ////// booksProfileArray - array of all list
+//         console.log(booksProfileArray);
+//       }
+//     });
+//   // }
+//   // console().then(response => )
+
+//   // function renderGallery(data) {}
+
+//   // function buildTopBooksMarkup({ books }) {
+//   //   console.log(books);
+//   //   return `
+//   //     <ul>
+//   //   <li></li>
+//   //   <li>${books[0].list_name}</li>
+//   //   <li>${books[0].title}</li>
+//   //   <li>${books[0].author}</li>
+//   //   <li><img src="${books[0].book_image}" alt="books photo" /></li>
+//   // </ul>
+//   //     `;
+//   // }
+
+//   // ///////////////////////////////////////////////////////////////////
+
+//   function buildTopBooksMarkup({ books }) {
+//     // console.log(books);
+//     for (let i = 0; i < books.length; i += 1) {
+//       // returning HTML markup as JS String
+//       //    let bookMarkUp2nd = '';
+//       return `
+//     <ul class="ul-bestsellers"></ul>
 //     `;
+//     }
+//   }
 // }
 
-// ///////////////////////////////////////////////////////////////////
-
-// function createBestsellers(data) {
-//   // getting container div element
-//   const [container] = document.getElementsByClassName('container');
-//   // preparing HTML markup
-//   const markup = data.reduce((accumulator, dataItem) => {
-//     const dataItemMarkup = buildProductMarkup(dataItem);
-//     return (accumulator += dataItemMarkup);
-//   }, ''); // <div>...<span>ELEMENT INFORMATION</span>...</div>
-//   // adding HTML into the container
-//   container.innerHTML = markup;
+// function createCategoriesGroups() {
+//   resData().
 // }
 
-function buildTopBooksMarkup({ books }) {
-  console.log(books);
-  for (let i = 0; i < books.length; i += 1) {
-    // returning HTML markup as JS String
-    //    let bookMarkUp2nd = '';
-    return `
-    <ul class="ul-bestsellers"> 
-  <li>Category: ${books[i].list_name}</li>
-  <li>Title: ${books[i].title}</li>
-  <li>Author: ${books[i].author}</li>
-  <li>Image: <img src="${books[i].book_image}" alt="books photo" /></li>
-</ul>
- 
-    `;
-  }
-}
+// renderBestsellers();
+
+// // async function fetchingTopBooks() {
+// //   console.log('fetching Top Books =>');
+// //   try {
+// //     const response = await axios.get(
+// //       `https://books-backend.p.goit.global/books/top-books`
+// //     );
+
+// //     console.log(response.data);
+// //     return response.data;
+// //   } catch (error) {
+// //     console.log('catch error', error);
+// //   }
+// // }
+// fetchingTopBooks();

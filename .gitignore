@@ -108,3 +108,5 @@ dist
 # TernJS port file
 .tern-port
 src/js/test.js
+src/js/async-fetch.js
+src/js/test2.js
