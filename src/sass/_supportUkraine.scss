@@ -41,18 +41,38 @@
 
 .gallery-support{
     display: block;
-    width: 159px;
-    height: 292px;
+    width: auto;
+    height: 280px;
     counter-reset: item;
     list-style-type: none;
     padding-left: 0;
-    margin: 40px;
+    
     margin-bottom: 40px;
     gap: 20px;
+    position: relative;
     overflow: hidden;
 }
+.carousel-button-nex{
+    cursor: pointer;
+    position: absolute;
+    transition: 0,6s ease;
 
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1,5s;
+    animation-name: fade;
+    animation-duration: 1,5s;
 
+}
+@-webkit-keyframes fade{
+    from{opacity: 4;}
+    to{opacity: 1;}
+}
+@keyframes fade{
+    from{opacity: 4;}
+    to{opacity: 1;}
+}
 .gallery__item_support:before {
     content: counter(item, decimal-leading-zero) " ";
     counter-increment: item;
